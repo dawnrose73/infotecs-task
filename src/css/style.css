@@ -1,0 +1,128 @@
+.wrapper {
+    position: relative;
+}
+
+.table {
+    width: 50%;
+    border: 1px solid black;
+    border-collapse: collapse;  
+    margin: 0 0 0 10px;
+
+}
+td {
+    border: 1px solid black;
+    padding: 5px;
+    min-width: 80px;
+}
+td p {
+    pointer-events: none;
+}
+td.table__about p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;  
+}
+.table__body td.table__eyeColor p {
+    display: none;
+}
+td.table__eyeColor div {
+    width: 50px;
+    height: 30px;
+    margin: 0 auto;
+    pointer-events: none;
+}
+.edit {
+    display: none;
+}
+.edit.visible {
+    display: block;
+    position: absolute;
+    left: 52%;
+    top: 2%;
+    width: 300px;
+    border: 1px solid black;
+    padding: 5px;
+}
+.edit > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.edit > div:last-child {
+    justify-content: space-around;
+}
+input[type="text"],
+textarea {
+    width: 200px;
+    border: 1px solid black;
+    padding: 5px;
+}
+textarea {
+    resize: none;
+    height: 100px;
+}
+.edit button {
+    padding: 5px;
+    border: 1px solid black;
+}
+.table__header td {
+    position: relative;
+    padding-right: 20px;
+    cursor: pointer;
+}
+.table__header td::after {
+    content: "▲";
+    color: grey;    
+    position: absolute;
+    right: 5px;
+    bottom: 30%;
+}
+
+td.active::after {
+    content: "▲"; 
+    color: black;     
+}
+td.active.sortedToHigh::after {
+    content: "▼";
+}
+
+.table__name,
+.table__surname,
+.table__eyeColor {
+    max-width: 80px;
+}
+.table__about {
+    width: 478px;
+}
+
+.pages {
+    max-width: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+.pages > div {
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+.pages__page > p {
+    pointer-events: none;
+}
+
+.pages__page.active {
+    background-color: gray;
+}
+
+.hide {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.hide button {
+    padding: 5px;
+    border: 1px solid black;
+    margin: 0 0 20px 10px;
+}
