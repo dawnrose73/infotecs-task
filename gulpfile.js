@@ -2,6 +2,7 @@ const {src, dest, series, watch} = require('gulp');
 const sync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const del = require('del');
+const ghPages = require('gh-pages');
 
 function html() {
     return src('src/**.html')
