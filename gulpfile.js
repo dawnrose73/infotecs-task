@@ -3,9 +3,6 @@ const sync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const del = require('del');
 
-const ghPages = require('gulp-gh-pages');
-
-
 function html() {
     return src('src/**.html')
     .pipe(dest('dist'))
@@ -40,13 +37,8 @@ function serve() {
     watch('src/**.js', series(scripts)).on('change', sync.reload);
 }
 
-function deploy() {
-    return gulp.src('./dist/**/*')
-    .pipe(ghPages());
-}
-
 exports.clear = clear;
-exports.deploy = deploy;
+
 exports.build = series(clear, json, html, css, scripts);
 exports.serve = series(clear, json, html, css, scripts, serve);
 
