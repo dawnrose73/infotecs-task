@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Test project</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="pages"></div>
+        <div class="hide"><button class="hide__name">Скрыть колонку "Имя"</button><button class="hide__surname">Скрыть колонку "Фамилия"</button><button class="hide__about">Скрыть колонку "Описание"</button><button class="hide__eyeColor">Скрыть колонку "Цвет глаз"</button></div>
+        <table class="table">
+            <thead class="table__header"></thead>
+            <tbody class="table__body"></tbody>
+        </table>
+
+        <div class="edit">
+            <div class="edit__name">
+                <label for="name">Имя:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="edit__surname">
+                <label for="surname">Фамилия:</label>
+                <input type="text" id="surname">
+            </div>
+            <div class="edit__about">
+                <label for="about">Цвет глаз:</label>
+                <textarea id="about"></textarea>
+            </div>
+            <div class="edit__eyecolor">
+                <label for="eye-color">Цвет глаз:</label>
+                <input type="text" id="eye-color">
+            </div>
+            <div class="edit__buttons">
+                <button class="edit__editBtn">Редактировать</button>
+                <button class="edit__cancelBtn">Отмена</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
